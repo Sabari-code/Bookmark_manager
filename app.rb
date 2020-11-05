@@ -10,7 +10,9 @@ end
 
 get '/bookmarks' do
 
-  Bookmark.all 
+  @bookmarks = Bookmark.all
+  erb :index
+  #Bookmark.all
 end
 
   run! if app_file == $0
